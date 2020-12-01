@@ -43,6 +43,8 @@ function! s:Enable() abort
     call add(w:indentline_indent_markers,
           \ matchadd('Conceal', '^\s\+\zs\%' . i . 'v ', 0, -1, {'conceal': conceal_char}))
   endfor
+    call add(w:indentline_indent_markers,
+          \ matchadd('Conceal', '^\s\+\zs\%' . 100 . 'v ', 0, -1, {'conceal': conceal_char}))
 endfunction
 
 function! s:Disable() abort
